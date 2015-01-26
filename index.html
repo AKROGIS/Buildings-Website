@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>NPS Buildings (Alaska)</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="leaflet-search/leaflet-search.src.css">
     <script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="app/main.js"></script>
     <script type="text/javascript" src="map.js"></script>
     <script type="text/javascript" src="config.js"></script>
-    <script type="text/javascript" src="data/photos.js"></script>
+      <script type="text/javascript" src="data/photos.js"></script>
+      <script type="text/javascript" src="leaflet-search/leaflet-search.src.js"></script>
   </head>
 
   <body>
@@ -32,9 +34,12 @@
       </div>
     </div>
 
+    <div id="map"></div>
+    <!--
     <div id="mobileTitlePage"></div>
 
     <div id="mainWindow">
+
 
       <div id="paneLeft">
         <ul id="myList" class="tilelist"></ul>
@@ -52,13 +57,13 @@
 
       <div id="map"></div>
     </div>
-
+-->
     <script>
-      (function() {
-        var s = document.createElement('script');
-        s.src = 'npmap/npmap-bootstrap.js';
-        document.body.appendChild(s);
-      })();
+        (function() {
+            var s = document.createElement('script');
+            s.src = 'npmap/npmap-bootstrap.js';
+            document.body.appendChild(s);
+        })();
       (function() {
         var s = document.createElement('script');
         s.src = 'app/run.js';

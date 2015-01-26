@@ -50,13 +50,15 @@ var NPMap = {
         tooltip: '{{Title}}',
         type: 'csv',
         url: 'data/PhotosNoBldg.csv'
-    },{
-        type:'arcgisserver',
-        opacity: 0.5,
-        tiled: false,
-        minZoom:5,
-        url: 'http://165.83.60.69:6080/arcgis/rest/services/Testing/poi_pt_default/FeatureServer'
-    }],
+    }
+       // ,{
+       // type:'arcgisserver',
+       // opacity: 0.5,
+       // tiled: false,
+       // minZoom:5,
+       // url: 'http://165.83.60.69:6080/arcgis/rest/services/Testing/poi_pt_default/FeatureServer'
+       // }
+    ],
     zoom: 5,
     maxZoom: 20
 };

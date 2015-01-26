@@ -10,13 +10,16 @@ var NPMap = {
     overlays: [{
         cluster: true,
         popup: {
-            title: '{{Short_Desc}}',
-            description: '<table>' +
+            title: '{{Title}}',
+            description: '<p>{{Short_Desc}}</p>' +
+            '<table>' +
                 '<tr><td class="att_name">Category</td><td>{{Category}}</td></tr>' +
+                '<tr><td class="att_name">Park Id</td><td>{{ParkName}}</td></tr>' +
                 '<tr><td class="att_name">Occupant</td><td>{{Occupant}}</td></tr>' +
                 '<tr><td class="att_name">Cost</td><td>{{Cost}}</td></tr>' +
                 '<tr><td class="att_name">Size</td><td>{{Size}}</td></tr>' +
                 '<tr><td class="att_name">Acquired</td><td>{{Date}}</td></tr>' +
+                '<tr><td class="att_name">Status</td><td>{{Status}}</td></tr>' +
                 '</table>',
             media:[{
                 type:"fmss",
@@ -31,7 +34,9 @@ var NPMap = {
         tooltip: '{{Title}}',
         type: 'csv',
         url: 'data/BldgWithPhotos.csv'
-    },{
+    }
+    /*
+    ,{
         cluster: true,
         popup: {
             title: 'Geotagged Building Photo',
@@ -51,13 +56,16 @@ var NPMap = {
         type: 'csv',
         url: 'data/PhotosNoBldg.csv'
     }
-        // ,{
-        // type:'arcgisserver',
-        // opacity: 0.5,
-        // tiled: false,
-        // minZoom:15,
-        // url: 'http://165.83.60.69:6080/arcgis/rest/services/Testing/building_footprints/MapServer'
-        // }
+    */
+    /*
+    ,{
+         type:'arcgisserver',
+         opacity: 0.5,
+         tiled: false,
+         minZoom:15,
+         url: 'http://165.83.60.69:6080/arcgis/rest/services/Testing/building_footprints/MapServer'
+         }
+      */
         ,{
           type: 'wms',
           layers: 'BestDataAvailableLayer',

@@ -20,3 +20,11 @@ function npmapReady() {
     initSearch();   //in modified version of leaflet-search.js
     setupSearch();  //in main.js
 }
+
+/* You will need to add the call to npmapReady in npmap-bootstrap.js
+
+    You will also want to add
+ maxClusterRadius:20
+ in npmap.js at about line 18978 (search for 'showCoverageOnHover: false,' and aff right after
+ 
+ */

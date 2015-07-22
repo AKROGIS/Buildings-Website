@@ -10,20 +10,19 @@ var NPMap = {
     overlays: [{
         cluster: true,
         popup: {
-            title: '{{Title}}',
-            description: '<p>{{Short_Desc}}</p>' +
+            title: '{{FMSS_Id}}',
+            description: '<p>{{Desc}}</p>' +
             '<table>' +
-                '<tr><td class="att_name">Category</td><td>{{Category}}</td></tr>' +
-                '<tr><td class="att_name">Park Id</td><td>{{ParkName}}</td></tr>' +
+                '<tr><td class="att_name">Park Id</td><td>{{Park_Id}}</td></tr>' +
                 '<tr><td class="att_name">Occupant</td><td>{{Occupant}}</td></tr>' +
                 '<tr><td class="att_name">Cost</td><td>{{Cost}}</td></tr>' +
                 '<tr><td class="att_name">Size</td><td>{{Size}}</td></tr>' +
-                '<tr><td class="att_name">Acquired</td><td>{{Date}}</td></tr>' +
+                '<tr><td class="att_name">Acquired</td><td>{{Year}}</td></tr>' +
                 '<tr><td class="att_name">Status</td><td>{{Status}}</td></tr>' +
                 '</table>',
             media:[{
                 type:"fmss",
-                id:"Title"
+                id:"FMSS_Id"
             }]
         },
         styles: {
@@ -31,41 +30,17 @@ var NPMap = {
                 'marker-symbol': 'warehouse'
             }
         },
-        tooltip: '{{Title}}',
+        tooltip: '{{FMSS_Id}}',
         type: 'csv',
-        url: 'data/BldgWithPhotos.csv'
+        url: 'data/buildings.csv'
     }
-    /*
-    ,{
-        cluster: true,
-        popup: {
-            title: 'Geotagged Building Photo',
-            description:'Building {{Title}} is not in the Buildings geodatabase. ' +
-                'Please help by adding an accurate location to the geodatabase.' ,
-            media:[{
-                type:"fmss",
-                id:"Title"
-            }]
-        },
-        styles: {
-            point: {
-                'marker-symbol': 'building'
-            }
-        },
-        tooltip: '{{Title}}',
-        type: 'csv',
-        url: 'data/PhotosNoBldg.csv'
-    }
-    */
-    /*
     ,{
          type:'arcgisserver',
          opacity: 0.5,
          tiled: false,
          minZoom:15,
-         url: 'http://165.83.60.69:6080/arcgis/rest/services/Testing/building_footprints/MapServer'
+         url: 'http://inpakrovmais:6080/arcgis/rest/services/Building_Footprints/MapServer'
          }
-      */
         ,{
           type: 'wms',
           layers: 'BestDataAvailableLayer',

@@ -1,5 +1,6 @@
 /**
  * Created by regan_sarwas on 7/8/14.
+ * Replaced GINA BDL with Esri Imagery 7/10/17.
  */
 var NPMap = {
     center: {
@@ -7,7 +8,8 @@ var NPMap = {
         lng: -152
     },
     div: 'map',
-    overlays: [{
+    overlays: [
+      {
         cluster: true,
         popup: {
             title: '{{FMSS_Id}}',
@@ -33,21 +35,21 @@ var NPMap = {
         tooltip: '{{FMSS_Id}}',
         type: 'csv',
         url: 'data/buildings.csv'
-    }
-    ,{
-         type:'arcgisserver',
-         opacity: 0.5,
-         tiled: false,
-         minZoom:15,
-         url: 'http://inpakrovmais:6080/arcgis/rest/services/Building_Footprints/MapServer'
-         }
-        ,{
-          type: 'wms',
-          layers: 'BestDataAvailableLayer',
-          transparent: true,
-          url: 'http://wms.alaskamapped.org/bdl',
-          minZoom:15
-        }
+      }
+     ,{
+        type:'arcgisserver',
+        opacity: 0.5,
+        tiled: false,
+        minZoom:15,
+        url: 'http://inpakrovmais:6080/arcgis/rest/services/Building_Footprints/MapServer'
+      }
+     ,{
+        type: 'arcgisserver',
+        opacity: 1.0,
+        tiled: true,
+        url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
+        minZoom:15
+      }
     ],
     zoom: 5,
     maxZoom: 20

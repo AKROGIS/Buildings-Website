@@ -17,7 +17,9 @@ function setupSearch() {
     var map = NPMap.config.L;
     var controlSearch = new L.Control.Search({
         layer: NPMap.config.overlays[0].L,
-        propertyName: "Title",
+        propertyName: "FMSS_Id",
+        zoom: 18,
+        text:"FMSS ID",
         initial: false});
     map.addControl( controlSearch );
 }

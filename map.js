@@ -41,7 +41,7 @@ var NPMap = {
         opacity: 0.5,
         tiled: false,
         minZoom:15,
-        url: 'http://inpakrovmais:6080/arcgis/rest/services/Building_Footprints/MapServer'
+        url: 'https://inpakrovmais.nps.doi.net:6443/arcgis/rest/services/Building_Footprints/MapServer'
       }
      ,{
         type: 'arcgisserver',

@@ -1,6 +1,7 @@
 /**
  * Created by regan_sarwas on 7/8/14.
  * Replaced GINA BDL with Esri Imagery 7/10/17.
+ * Update the URL to the building footprints on 11/26/2018.
  */
 var NPMap = {
     center: {
@@ -41,7 +42,7 @@ var NPMap = {
         opacity: 0.5,
         tiled: false,
         minZoom:15,
-        url: 'https://inpakrovmais.nps.doi.net:6443/arcgis/rest/services/Building_Footprints/MapServer'
+        url: 'https://akrgis.nps.gov:6443/arcgis/rest/services//AKR/Building_Footprints/MapServer'
       }
      ,{
         type: 'arcgisserver',

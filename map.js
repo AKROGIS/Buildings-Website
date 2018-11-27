@@ -25,7 +25,7 @@ var NPMap = {
                 '</table>',
             media:[{
                 type:"fmss",
-                id:"FMSS_Id"
+                id:"Photo_Id"
             }]
         },
         styles: {

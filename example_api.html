@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>basic | Examples | NPMap.js</title>
+    <link href="https://www.nps.gov/lib/bootstrap/3.3.2/css/nps-bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.nps.gov/lib/npmap.js/4.0.0/npmap.min.css" rel="stylesheet">
+    <script src="https://www.nps.gov/lib/npmap.js/4.0.0/npmap.min.js"></script>
+    <style>
+      body {
+      margin: 0;
+      padding: 0;
+      }
+      #map {
+      bottom: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = L.npmap.map({
+      div: 'map'
+      });
+    </script>
+  </body>
+</html>
